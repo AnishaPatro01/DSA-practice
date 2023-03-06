@@ -1,3 +1,19 @@
+//Leetcode solution
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+       ListNode* curr=head;
+       ListNode* prev=NULL;
+       while(curr!=NULL){
+          ListNode* forward=curr->next;
+           curr->next=prev;
+           prev=curr;
+           curr=forward;
+       }
+       return prev;
+    }
+};
+//GFG solution-
 //{ Driver Code Starts
 //Initial Template for C++// C program to find n'th Node in linked list
 #include <stdio.h>
