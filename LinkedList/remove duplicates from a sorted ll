@@ -1,0 +1,18 @@
+Node *removeDuplicates(Node *head)
+{
+ // your code goes here
+ Node* temp=head;
+ Node* prev=temp;
+ 
+ while(temp){
+     if(prev->data==temp->data){
+         prev->next=temp->next;
+         temp=temp->next;
+     }
+     else{
+         prev=temp;
+         temp=temp->next;
+     }
+ }
+ return head;
+}
